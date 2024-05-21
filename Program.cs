@@ -11,9 +11,9 @@ namespace Assignment3._2._2
             int[,] matrix3 = new int[2,2];
 
             AddMatrix(matrix1, matrix2, matrix3);
-            PrintMatices(matrix1);
-            PrintMatices(matrix2);
-            PrintMatices(matrix3);
+            PrintMatices(matrix1, "The first matrix is: ");
+            PrintMatices(matrix2, "The second matrix is: ");
+            PrintMatices(matrix3, "The sum of the two matrices is: ");
 
         }
         
@@ -31,10 +31,12 @@ namespace Assignment3._2._2
             }
         }
 
-        public static void PrintMatices(int[,] matrix)
+        public static void PrintMatices(int[,] matrix, string matrixNumber)
         {
             int rows = matrix.GetLength(0);
             int columns = matrix.GetLength(1);
+
+            Console.WriteLine(matrixNumber);
 
             for (int i = 0; i < rows; i++)
             {
